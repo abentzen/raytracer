@@ -1,4 +1,4 @@
-set(HEADERS objects/Object.hpp)
+set(HEADERS objects/Object.hpp Ray.hpp Vector.hpp)
 set(SRC main.cpp)
 
 source_group("Header Files" FILES ${HEADERS})
