@@ -3,7 +3,7 @@
 class Vector {
 public:
 	Vector(double x, double y, double z);
-	Vector(const Vector &rhs);
+	Vector(const Vector &other);
 
 	Vector &operator+=(const Vector &rhs);
 	Vector &operator-=(const Vector &rhs);
