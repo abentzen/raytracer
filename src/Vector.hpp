@@ -14,5 +14,8 @@ public:
 	const Vector operator*(double rhs);
 	const Vector operator/(double rhs);
 
+	double dot(const Vector &other);
+	Vector cross(const Vector &other);
+
 	double x, y, z;
 };
