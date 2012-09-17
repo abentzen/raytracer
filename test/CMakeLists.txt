@@ -1,5 +1,6 @@
 include_directories("../src")
 
-add_executable(vector_test vector.cpp ../src/Vector.cpp)
+include(pigeon_test)
+set(PIGEON_TEST_PATH "${CMAKE_SOURCE_DIR}/test")
 
-add_test(Vector vector_test)
+add_pigeon_test(vector_test vector.cpp ../src/Vector.cpp)
