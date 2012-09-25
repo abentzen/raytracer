@@ -4,11 +4,16 @@
 # Assume that the framework headers are in the root of the project
 set(PIGEON_TEST_PATH ${CMAKE_SOURCE_DIR} CACHE PATH "Path to the PigeonTest framework headers.")
 
+# Sets common files that should be included in all tests
+function(pigeon_test_setup)
+set(COMMON_FILES ${ARGN} CACHE INTERNAL "")
+endfunction(pigeon_test_setup)
+
 # Adds a test named test_name with all arguments after that as files to be compiled.
 # All tests must run with no CLI arguments.
 function(add_pigeon_test test_name)
 source_group("Header Files" "${PIGEON_TEST_PATH}/pigeon_test.hpp")
-add_executable(${test_name} "${PIGEON_TEST_PATH}/pigeon_test.hpp" ${ARGN})
+add_executable(${test_name} "${PIGEON_TEST_PATH}/pigeon_test.hpp" ${COMMON_FILES} ${ARGN})
 add_test(${test_name} ${test_name})
 
 endfunction(add_pigeon_test)
