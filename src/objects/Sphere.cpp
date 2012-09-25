@@ -1,6 +1,6 @@
-#include "Sphere.hpp"
-#include "../Vector.hpp"
-#include "../Ray.hpp"
+#include "objects/Sphere.hpp"
+#include "Vector.hpp"
+#include "Ray.hpp"
 
 Sphere::Sphere(const Vector &_center, double _radius) : center(_center), radius(_radius) {
 }

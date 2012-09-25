@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Object.hpp"
-#include "../Ray.hpp"
-#include "../Vector.hpp"
+#include "objects/Object.hpp"
+#include "Ray.hpp"
+#include "Vector.hpp"
 
 class Sphere : public Object {
 public:

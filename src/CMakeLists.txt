@@ -1,3 +1,5 @@
+include_directories(.)
+
 # Header file lists
 set(OBJ_HEADERS objects/Object.hpp objects/Sphere.hpp)
 set(MISC_HEADERS Ray.hpp Vector.hpp)
