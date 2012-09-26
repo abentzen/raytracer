@@ -1,5 +1,5 @@
 #include "Vector.hpp"
-#include <math.h>
+#include <cmath>
 
 #pragma region operator_overloads
 
@@ -35,28 +35,28 @@ Vector &Vector::operator/=(double rhs) {
 	return *this;
 }
 
-const Vector Vector::operator+(const Vector &rhs) {
+const Vector Vector::operator+(const Vector &rhs) const {
 	Vector result(*this);
 	result += rhs;
 
 	return result;
 }
 
-const Vector Vector::operator-(const Vector &rhs) {
+const Vector Vector::operator-(const Vector &rhs) const {
 	Vector result(*this);
 	result -= rhs;
 
 	return result;
 }
 
-const Vector Vector::operator*(double rhs) {
+const Vector Vector::operator*(double rhs) const {
 	Vector result(*this);
 	result *= rhs;
 
 	return result;
 }
 
-const Vector Vector::operator/(double rhs) {
+const Vector Vector::operator/(double rhs) const {
 	Vector result(*this);
 	result /= rhs;
 
@@ -65,11 +65,11 @@ const Vector Vector::operator/(double rhs) {
 
 #pragma endregion
 
-double Vector::dot(const Vector &other) {
+double Vector::dot(const Vector &other) const {
 	return (x*other.x + y*other.y + z*other.z);
 }
 
-Vector Vector::cross(const Vector &other) {
+Vector Vector::cross(const Vector &other) const {
 	Vector result(0,0,0);
 	result.x = y*other.z - z*other.y;
 	result.y = z*other.x - x*other.z;
@@ -78,7 +78,7 @@ Vector Vector::cross(const Vector &other) {
 	return result;
 }
 
-double Vector::length() {
+double Vector::length() const {
 	return sqrt(x*x+y*y+z*z);
 }
 
