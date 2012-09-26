@@ -18,6 +18,7 @@ public:
 	Vector cross(const Vector &other) const;
 
 	double length() const;
+	void makeUnit();
 
 	double x, y, z;
 };

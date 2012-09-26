@@ -82,6 +82,13 @@ double Vector::length() const {
 	return sqrt(x*x+y*y+z*z);
 }
 
+void Vector::makeUnit() {
+	double len = length();
+	x /= len;
+	y /= len;
+	z /= len;
+}
+
 #pragma region constructors
 
 Vector::Vector(double x, double y, double z) : x(x), y(y), z(z) {
