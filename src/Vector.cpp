@@ -1,4 +1,5 @@
 #include "Vector.hpp"
+#include <math.h>
 
 #pragma region operator_overloads
 
@@ -75,6 +76,10 @@ Vector Vector::cross(const Vector &other) {
 	result.z = x*other.y - y*other.x;
 
 	return result;
+}
+
+double Vector::length() {
+	return sqrt(x*x+y*y+z*z);
 }
 
 #pragma region constructors

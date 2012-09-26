@@ -17,5 +17,7 @@ public:
 	double dot(const Vector &other);
 	Vector cross(const Vector &other);
 
+	double length();
+
 	double x, y, z;
 };
