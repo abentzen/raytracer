@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
 
-#define TEST_SETUP() static int errors;
+#define TEST_SETUP() static int errors;\
+	static int test_no = 0;
 
 #define REPORT() std::cout << "Number of failed tests: " << errors << std::endl;
 
@@ -9,5 +10,6 @@
 
 #define ASSERT(value, expected, error) if((expected) != (value)) {\
 	errors++;\
-	std::cout << "Test failure: " << (error) << std::endl;\
-	}
+	std::cout << "Failed test number " << test_no << ": " << (error) << std::endl;\
+	}\
+	test_no++;
